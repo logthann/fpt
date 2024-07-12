@@ -84,6 +84,14 @@ qua liên kết vật lý đảm bảo tin cậy.
 * Chiều truyền tin
 * Định nghĩa các kết nối cáp với các mạng
 
+Lớp vật lý cung cấp phương tiện điện, cơ, chức năng và thủ tục để thiết lập, duy trì và giải phóng liên kết vật lý giữa các hệ thống.
+Thuộc tính điện: biểu diễn các bit (các mức điện áp của tín hiệu).
+Thuộc tính cơ: tính chất vật lý của giao diện đường truyền như kích thước, cấu hình, cách đấu nối ..
+Các chức năng của phần tử giao diện vật lý
+Thuộc tính thủ tục: điều khiển đường truyền để truyền tải các chuỗi bit
+Đặc điểm khác biệt cơ bản của lớp vật lý so với các lớp khác là: lớp thấp nhất nên không có PDU, không có tiêu đề gói tin, dữ liệu đươc truyền đi theo dòng bit.
+Môi trường truyền tin: đường truyền vật lý
+
 ### Phương thức hoạt động
 
 #### A,Phía máy gửi đi thông tin
@@ -200,7 +208,7 @@ Sự trao đổi thông tin giữa hai hệ thống trong OSI tuân thủ theo m
 
 Để truyền dữ liệu từ nguồn đến đích, mỗi lớp OSI tại đích phải bắt tay với lớp đồng mức tại đích. Phương thức này gọi là peer-to-peer. Trong quá trình đó, giao thức tại mỗi lớp trao đổi thông tin qua các PDU của lớp đố với lớp đồng mức tương ứng.
 
-Mỗi lớp phụ thuộc vào dịch vụ được cung cấp bên dưới. Để thực hiện điều này, lớp bên dưới sử dụng phương thức đóng gói để đưa PDU lớp trên vào phần dữ liueej trong PDU của lớp đó đồng thời gắn các tiêu đề (header/trailer) đặc trưng của lớp đó vào PDU. Tiếp theo, khi PDU chuyển tiếp xuống lớp dưới sẽ có thêm các tiêu đề khác.
+Mỗi lớp phụ thuộc vào dịch vụ được cung cấp bên dưới. Để thực hiện điều này, lớp bên dưới sử dụng phương thức đóng gói để đưa PDU lớp trên vào phần dữ liệu trong PDU của lớp đó đồng thời gắn các tiêu đề (header/trailer) đặc trưng của lớp đó vào PDU. Tiếp theo, khi PDU chuyển tiếp xuống lớp dưới sẽ có thêm các tiêu đề khác.
 
 ![1720516909546](image/OSIandTCP-IP/1720516909546.png)
 
